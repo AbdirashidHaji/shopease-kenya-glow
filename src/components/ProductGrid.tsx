@@ -7,14 +7,14 @@ interface ProductGridProps {
   title: string;
   products: Product[];
   showViewAll?: boolean;
-  viewAllLink?: string; // Add optional viewAllLink prop
+  viewAllLink?: string;
 }
 
 export function ProductGrid({ 
   title, 
   products, 
   showViewAll = true,
-  viewAllLink = "/products" // Default link if not provided
+  viewAllLink = "/products" 
 }: ProductGridProps) {
   return (
     <section className="py-10 md:py-16">
