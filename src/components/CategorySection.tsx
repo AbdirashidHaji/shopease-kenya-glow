@@ -1,5 +1,6 @@
 
 import { categories } from "@/data/categories";
+import { Link } from "react-router-dom";
 
 export function CategorySection() {
   return (
@@ -8,9 +9,9 @@ export function CategorySection() {
         <h2 className="text-2xl md:text-3xl font-semibold mb-6">Shop by Category</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
           {categories.map((category) => (
-            <a 
+            <Link 
               key={category.id} 
-              href={`/category/${category.id}`} 
+              to={`/category/${category.id}`} 
               className="group relative overflow-hidden rounded-lg aspect-square card-hover"
             >
               <img 
@@ -22,7 +23,7 @@ export function CategorySection() {
                 <h3 className="text-white font-medium text-lg">{category.name}</h3>
                 <p className="text-white/80 text-sm">{category.description}</p>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
